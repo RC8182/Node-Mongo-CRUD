@@ -1,0 +1,30 @@
+GET http://localhost:4000/api/users HTTP/1.1
+
+###
+
+POST  http://localhost:4000/post HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Dibus",
+    "lastName":"test4",
+    "phoneNumber":55555,
+    "email": "https://www.youtube.com/embed/FaMVPaLkqbw?controls=0"
+    
+}
+
+###
+PUT  http://localhost:4000/api/user/update/6329be1ac59a4cc19ce290de HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Updated",
+    "lastName":"test2",
+    "phoneNamber":"Updated",
+    "email": "https://www.youtube.com/Updated"
+}
+####
+
+DELETE  http://localhost:4000/api/user/delete/63289dba90031249c454bbd2  HTTP/1.1
+
+###

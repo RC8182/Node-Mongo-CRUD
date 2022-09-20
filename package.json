@@ -1,0 +1,32 @@
+{
+  "name": "node-mongo-crud",
+  "version": "1.0.0",
+  "description": "CRUD whith Node and MongoDB ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "node",
+    "mongodb",
+    "mongoose",
+    "http",
+    "methods",
+    "put",
+    "get",
+    "post",
+    "deleted",
+    "crud"
+  ],
+  "author": "RC8182",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
