@@ -13,7 +13,6 @@ dbStart=require('../DB/db');
 // Enrutamos
 app.use(require('../Routes/routes')); 
 
-// Llamamos al los métodos 
 
 const Server= app.listen(port,()=>{
     console.log(`Server listen on Port ${port}`)
