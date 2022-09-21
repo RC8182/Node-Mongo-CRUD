@@ -8,10 +8,10 @@ app.use(express.json());
 app.use(express.urlencoded({extends: false}));
 
 // Conectamos con DB
-dbStart=require('../DB/db');
+dbStart=require('../DB/index.db');
 
 // Enrutamos
-app.use(require('../Routes/routes')); 
+app.use(require('../Routes/index.routes')); 
 
 
 const Server= app.listen(port,()=>{

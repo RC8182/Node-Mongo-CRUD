@@ -1,6 +1,10 @@
 const Router= require('express');
 const router=Router();
-const {home, getAllUsers, postUser, putUser, deleteUser} =require('../Controllers/htmlMethods');
+const {home, 
+    getAllUsers, 
+    postUser, 
+    putUser, 
+    deleteUser} =require('../Controllers/index.functions');
 
 router.get('/', home);
 router.get('/api/users',getAllUsers);

@@ -1,4 +1,4 @@
 
 // Arrancamos Servidor
-require('./Server/server.js');
+require('./Server/index.server.js');
 

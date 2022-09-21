@@ -1,12 +1,14 @@
 const Users=require('../Models/usersSchema');
 
-const home= (req, res)=>{
+const methods={};
+
+methods.home= (req, res)=>{
     res.send('Welcome to Node CRUD')
 }
 
 
 
-const postUser= async (req, res)=>{
+methods.postUser= async (req, res)=>{
     const {name, lastName, phoneNumber, email}= req.body;
     const post= Users({
         "name": name,
@@ -23,7 +25,7 @@ const postUser= async (req, res)=>{
     })
 }
 
-const getAllUsers= async (req, res)=>{
+methods.getAllUsers= async (req, res)=>{
     const result= await Users.find()
     res.status(200).json({
         message: 'Users List',
@@ -33,7 +35,7 @@ const getAllUsers= async (req, res)=>{
     })
 }
 
-putUser=async (req, res)=>{
+methods.putUser=async (req, res)=>{
     const {name, lastName, phoneNumber, email}= req.body;
     const id= req.params._id
     const toUpdate= await Users.findOne({'_id': id});
@@ -53,7 +55,7 @@ putUser=async (req, res)=>{
 
 }
 
-deleteUser= async (req, res)=>{
+methods.deleteUser= async (req, res)=>{
     const id= req.params._id;
          await Users.deleteOne({'_id': id})
          res.status(202).json({
@@ -62,4 +64,4 @@ deleteUser= async (req, res)=>{
          })
 }
 
-module.exports={home, getAllUsers, postUser, putUser, deleteUser };
+module.exports=methods;
